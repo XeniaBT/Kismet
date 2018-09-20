@@ -145,27 +145,7 @@ def associatedClients(network, NWtype, bssid, essid_text, privacy, cipher, auth)
             if (ssid is not None):  # and (type == "tods"):
                 ClientType2 = client.find('SSID').find('type').text 
                 
-            
-       #     cSSID = ""
-       #     ClientSSIDliste = list()
-       #     cSSIDliste = ""
-       #     if (ssid is not None):
-        #        x = client.find('SSID').find('ssid')
-        #        y=""
-        #        if x is not None:
-       #             y = client.find('SSID').find('ssid').text 
-       #         ClientSSIDliste.append(y)
-       #         cSSIDliste = str(ClientSSIDliste)
-            
-            
-  
- #   clients = network.getiterator('wireless-client')
- #   if clients is not None:
- #       client_info = list()
- #       for client in clients:
-  #          client_mac = client.find('client-mac').text
-
-            
+# Client-SSID liste ersetellen            
             cSSIDliste = ""            
             if ssid is not None:
                 ClientSSIDliste = list()
@@ -177,18 +157,6 @@ def associatedClients(network, NWtype, bssid, essid_text, privacy, cipher, auth)
                 cSSIDliste = str(ClientSSIDliste)
                 cSSIDliste = str(' '.join(str(x) for x in ClientSSIDliste))
             
-            
-            
-       #     ClientSSIDliste = list()
-       #     cSSIDliste, cSSIDls = "", ""
-       #     if (ssid is not None):
-        #        for z in ssid:
-       #             x = client.find('SSID').find('ssid')
-      #              if x is not None:
-      #                   cSSIDliste = client.find('SSID').find('ssid').text 
-                   #     cSSIDls = client.find('SSID').find('ssid').text 
-                #    cSSIDliste = str(ClientSSIDliste.append(cSSIDls))
-                    
             
             frames = client.find('packets')
             date, crypt, total = '','',''
